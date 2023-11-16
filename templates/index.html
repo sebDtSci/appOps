@@ -8,10 +8,7 @@
 <body>
     <header>
         <h1 class="logo">STAILE</h1>
-        
-        <!-- <div class="add-button">
-            <a href="/show_cart">Mon Panier </a>
-        </div> -->
+
         <nav>
             <!-- <a href="#" class="nav-button">Home</a> -->
             <a href="/show_cart" class="nav-button">Cart</a>
@@ -22,7 +19,13 @@
 
 <div class="container">
     <h1>Liste de produits</h1>
-
+	<div class="search-bar">
+	    <form action="{{ url_for('search_products') }}" method="get">
+	        <input type="text" name="query" placeholder="Search products...">
+	        <button type="submit">Search</button>
+	        <a href="{{ url_for('index') }}">Cancel</a>
+	    </form>
+	</div>
     <ul class="products">
         {% for product in products %}
     <div class="product-card">
@@ -42,6 +45,7 @@
         <a href="{{ url_for('add_product') }}">Ajouter un produit</a>
     </div>
 </div>
+
 
 </body>
 </html>

@@ -9,6 +9,15 @@
     <hader >
         <h1 class="logo">STAILE</h1>
     </hader>
+     {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-message">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
     <div class="container">
         <h1>Connexion page</h1>
         <form method="post" class="login-form">

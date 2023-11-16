@@ -1,4 +1,6 @@
-
+.cancel-button {
+    /* Styles du bouton */
+}
 
 h1 {
     color: #333;
@@ -97,4 +99,14 @@ input[type="submit"]:hover {
 
 .edit-button:hover, .delete-button:hover {
     background-color: #ccc;
+}
+
+.flash-message {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #green;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
 }

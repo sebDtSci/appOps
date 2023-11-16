@@ -22,34 +22,15 @@
             <input type="password" id="password" name="password" class="form-input" required>
             <br>
 
-            <input type="submit" value="Register" class="submit-button">
+            <input type="submit" value="Register" class="submit-button" onclick="showMessage()">
+
         </form>
     </div>
-
+<script>
+function showMessage() {
+    alert("Enregistrement en cours...");
+}
+</script>
 </body>
 </html>
 
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Register</title>
-</head>
-<body>
-
-    <h1>Register</h1>
-
-    <form action="/register" method="post">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-
-        <input type="submit" value="Register">
-    </form>
-
-</body>
-</html> -->

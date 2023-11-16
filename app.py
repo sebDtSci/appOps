@@ -3,7 +3,7 @@ import uuid
 import csv
 from flask_login import LoginManager, UserMixin, login_required, login_user\
     , current_user #logout_user
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 from werkzeug.utils import secure_filename
 
@@ -91,6 +91,7 @@ def register():
         email = request.form['email']
         password = request.form['password']
         write_client_to_csv(email, password)
+        flash('Done!')
         return redirect(url_for('login'))
     return render_template('register.html')
 
@@ -154,7 +155,8 @@ def add_product():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         print(filename)
 
-        state = modelReco.state('static/uploads/' + filename)
+        #state = modelReco.state('static/uploads/' + filename)
+        state = modelReco.state(filename)
         print(state)
 
         write_product_to_csv(name, price, filename,comm,brand,key,state)
@@ -322,5 +324,13 @@ def show_cart():
 def pay():
     return render_template('pay.html')
 
+@app.route('/search_products', methods=['GET'])
+def search_products():
+    query = request.args.get('query')
+    products = read_products_from_csv()
+    filtered_products = [product for product in products if query.lower() in product['name'].lower()]
+    return render_template('index.html', products=filtered_products)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5000)
+
