@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesLog.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <hader >
+        <h1 class="logo">STAILE</h1>
+    </hader>
+    <div class="container">
+        <h1>Connexion page</h1>
+        <form method="post" class="login-form">
+            <label for="email">Identifier:</label>
+            <input type="text" id="email" name="email" class="form-input" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+
+            <input type="submit" value="Connexion" class="submit-button">
+        </form>
+
+        <div>
+            <a href="{{ url_for('register') }}">Sign up</a>
+        </div>
+        <p></p>
+        <div>
+            <a href="{{ url_for('register') }}">forgotten password</a>
+        </div>
+
+    <h1>Products</h1>
+        <div class="products">
+            {% if products %}
+                {% for product in products %}
+                <div class="product-card">
+                    <h2>{{ product['name'] }}</h2>
+                    <p>Price : {{ product['price'] }}€</p>
+                    <p>Seller : {{ product['client'] }}</p>
+                    {% if product.get('img') %}
+                        <img src="{{ url_for('static', filename='uploads/' + product.get('img')) }}" width="200">
+                    {% endif %}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

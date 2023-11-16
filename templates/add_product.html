@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un produit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesLog.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index" class="nav-button">Home</a>
+            <a href="/show_cart" class="nav-button">Cart</a>
+            <a href="#" class="nav-button">Profil</a>
+            <a href="/" class="nav-button"> logout </a>
+        </nav>
+    </header>
+
+<div class="container">
+    <h1>Ajouter un produit</h1>
+
+    <div class="form-box">
+        <!-- <form method="post"> -->
+        <form action="/add_product" method="post" enctype="multipart/form-data">
+
+
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" class="form-input"><br>
+
+            <label for="price">Price :</label>
+            <input type="text" id="price" name="price" class="form-input"><br>
+
+            <label for="comm">Description :</label>
+            <input type="text" id="comm" name="comm" class="form-input"><br>
+        
+            
+            <input type="file" name="product_image" class="form-input">
+
+            <input type="submit" value="Add" class="submit-button">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

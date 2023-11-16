@@ -1,0 +1,100 @@
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.form-box {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    /* width: 100px; */
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #a3dfca;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #a3dfca;
+}
+
+
+.product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item {
+    background-color: #eaeaea;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.add-button a {
+    display: inline-block;
+    background-color: #a3dfca;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.add-button a:hover {
+    background-color: #a3dfca;
+}
+
+.login-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+/* Paragraphs */
+.container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    /* display: inline-block; Important pour faire en sorte que la bordure entoure le texte */
+    /* border: 1px solid #ccc; Ajoute une bordure */
+    /* padding: 5px; Espace entre le texte et la bordure */
+    /* margin: 5px; *//*Espace autour du paragraphe */
+}
+
+/* Edit and Delete Buttons */
+.edit-button, .delete-button {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #ccc;
+}
