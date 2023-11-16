@@ -4,3 +4,4 @@ app-env/
 *.npy
 /model/rnn/array_X.npy
 model/rnn/my_model.h5
+*.ipynb
