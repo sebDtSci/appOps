@@ -1,2 +1,4 @@
 id,name,price,client,img,comm,brand,key,state
 101c2ae2-6d89-4449-9f5a-e9930acf5a1d,Pumha,45,seb,chauNeuv.jpeg,"Last Pumha for runnning, best shooes ever ! For runner",[],,New
+24f026d1-86df-423a-b3f8-272386c2ced0,Adidas,34,seb,adidas-superstar-bape-lundstein71.jpg,"Last Adidas for runnning, best shooes ever ! For runner",[],,New
+20098cbc-3aa5-4a1b-86c6-0d698fc9887e,NIKE,45,douziali94@gmail.com,Nike.jpeg,"Last Nike shooes for running. Made for runners and real sportifs. I have climb a montain with theses shooes. Sport, Running",['Nike'],shooes,Good State

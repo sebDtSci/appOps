@@ -126,7 +126,7 @@ def login():
     return render_template('login.html', products=products)
 
 @app.route('/index')
-@login_required
+#@login_required
 def index():
     products = read_products_from_csv()
     return render_template('index.html',products=products)
